@@ -189,72 +189,52 @@
     </div>
 
 <div class="welcome">
-  <h1> Welcome To </h1>
-  <p> X TEJEKATE SATOE</p>
+  <h1> WELCOME </h1>
+  <p> TO X TEJEKATE SATOE</p>
 </div>
 </div>
 
 <!-- GALLERY --> 
 <div class="gallery">
-  <h1> Gallery</h1>
+  <h1>Class Gallery</h1>
+</div>
+  <div class="slider">
+    <div class="track">
+        <div class="box"><img src="backgroundatas.JPG" alt="" onclick="showImage(this)"></div>
+        <div class="box"><img src="backgroundatas.JPG" alt="" onclick="showImage(this)"></div>
+        <div class="box"><img src="backgroundatas.JPG" alt="" onclick="showImage(this)"></div>
+        <div class="box"><img src="backgroundatas.JPG" alt="" onclick="showImage(this)"></div>
+        <div class="box"><img src="backgroundatas.JPG" alt="" onclick="showImage(this)"></div>
+        <div class="box"><img src="backgroundatas.JPG" alt="" onclick="showImage(this)"></div>
+        <div class="box"><img src="backgroundatas.JPG" alt="" onclick="showImage(this)"></div>
+        <div class="box"><img src="backgroundatas.JPG" alt="" onclick="showImage(this)"></div>
+        <div class="box"><img src="backgroundatas.JPG" alt="" onclick="showImage(this)"></div>
+        <div class="box"><img src="backgroundatas.JPG" alt="" onclick="showImage(this)"></div>
+        <div class="box"><img src="backgroundatas.JPG" alt="" onclick="showImage(this)"></div>
+        <div class="box"><img src="backgroundatas.JPG" alt="" onclick="showImage(this)"></div>
+        <div class="box"><img src="backgroundatas.JPG" alt="" onclick="showImage(this)"></div>
+        <div class="box"><img src="backgroundatas.JPG" alt="" onclick="showImage(this)"></div>
+        <div class="box"><img src="backgroundatas.JPG" alt="" onclick="showImage(this)"></div>
+        <div class="box"><img src="backgroundatas.JPG" alt="" onclick="showImage(this)"></div>
+    </div>
 </div>
 
-<div class="slider">
-  <div class="track">
-
-      <div class="box">
-          <img src="backgroundatas.JPG" alt="">
-      </div>
-      <div class="box">
-          <img src="backgroundatas.JPG" alt="">
-      </div>
-      <div class="box">
-          <img src="backgroundatas.JPG" alt="">
-      </div>
-      <div class="box">
-          <img src="backgroundatas.JPG" alt="">
-      </div>
-      <div class="box">
-        <img src="backgroundatas.JPG" alt="">
-      </div>
-      <div class="box">
-        <img src="backgroundatas.JPG" alt="">
-      </div>
-      <div class="box">
-        <img src="backgroundatas.JPG" alt="">
-      </div>
-      <div class="box">
-        <img src="backgroundatas.JPG" alt="">
-      </div>
-
-      <div class="box">
-        <img src="backgroundatas.JPG" alt="">
-      </div>
-      <div class="box">
-        <img src="backgroundatas.JPG" alt="">
-      </div>
-      <div class="box">
-        <img src="backgroundatas.JPG" alt="">
-      </div>
-      <div class="box">
-          <img src="backgroundatas.JPG" alt="">
-      </div>
-      <div class="box">
-        <img src="backgroundatas.JPG" alt="">
-      </div>
-      <div class="box">
-        <img src="backgroundatas.JPG" alt="">
-      </div>
-      <div class="box">
-        <img src="backgroundatas.JPG" alt="">
-      </div>
-      <div class="box">
-        <img src="backgroundatas.JPG" alt="">
-      </div>
-
-
-  </div>
+<div class="overlay" id="overlay" onclick="hideImage()">
+    <img id="popupImage" src="" alt="Popup Image">
 </div>
+
+<script>
+    function showImage(imgElement) {
+        var popupImage = document.getElementById("popupImage");
+        popupImage.src = imgElement.src;
+        document.getElementById("overlay").style.display = "flex";
+    }
+    
+    function hideImage() {
+        document.getElementById("overlay").style.display = "none";
+    }
+</script>
+
 
 <!-- Struktur --> 
 
