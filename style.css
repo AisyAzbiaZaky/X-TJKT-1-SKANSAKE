@@ -18,6 +18,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: Poppins,sans-serif;
+  max-width: 600px;
+  min-width: auto;
 }
 
 
@@ -243,17 +245,26 @@ img {
 }
 
 /* Struktur*/
-
-
 .tree {
-	width: auto;
-	height: auto;
+  max-width: 100%;
+  min-width: auto;
+  min-height: auto;
+  max-height: 50%;
 	text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .tree ul {
 	padding-top: 20px;
+  align-items: center;
+  display: flex;
 	position: relative;
+  max-width: 100%;
+  min-width: auto;
+  min-height: auto;
+  max-height: 50%;
 	transition: .5s;
 }
 .tree li {
@@ -327,6 +338,7 @@ img {
 .tree li a:hover+ul li::after, .tree li a:hover+ul li::before, .tree li a:hover+ul::before, .tree li a:hover+ul ul::before {
 	border-color: #94a0b4;
 }
+
 
 /* Footer*/
 
