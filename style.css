@@ -1,0 +1,401 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap");
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(53, 53, 53) black;
+
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+}
+
+body {
+	background-color: #1c1c1c;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Navbar*/
+.menu {
+  padding: 0.5rem;
+  background-color: #0505057e;
+  position: sticky;
+  top: 0;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  border-radius: 1px;
+  box-shadow: 0 10px 25px 0 rgba(#000, 0.075);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+}
+
+.menu>h {
+  align-items: start;
+  display: f-96-lex;
+  justify-content: start;
+  position: relative;
+}
+
+.link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 50px;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transform-origin: center left;
+  transition: width 0.2s ease-in;
+  text-decoration: none;
+  color: white;
+  &:before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    display: block;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in;
+    transform-origin: center right;
+    background-color: #99999950;
+  }
+
+  &:hover,
+  &:focus {
+    outline: 0;
+    width: 130px;
+
+    &:before,
+    .link-title {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
+
+.link-icon {
+  width: 28px;
+  height: 28px;
+  display: block;
+  flex-shrink: 0;
+  left: 18px;
+  position: absolute;
+  svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.link-title {
+  transform: translateX(100%);
+  transition: transform 0.2s ease-in;
+  transform-origin: center right;
+  display: block;
+  text-align: center;
+  text-indent: 28px;
+  width: 100%;
+}
+
+
+
+.body {
+  background: linear-gradient(to bottom, rgba(88, 26, 139, 0.76), rgb(36, 36, 36)),
+  url(pilihanbg2.png);
+	background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+
+.welcome {
+  margin: auto;
+  margin-top: 20%;
+  color: white;
+  width: 50%;
+
+}
+
+.welcome>h1 {
+  text-align: center;
+  text-shadow: 1px 1px 20px white;
+  font-size: 50px;
+}
+
+.welcome>p {
+  text-align: center;
+  font-size: 14px;
+  font-size: 25px;
+  text-shadow: 1px 1px 20px white;
+}
+
+.gallery {
+  margin: auto;
+  margin-top: 20%;
+  color: white;
+  width: 50%;
+}
+
+.gallery>h1 {
+  text-align: center;
+  text-shadow: 1px 1px 20px white;
+}
+
+.gallery>p {
+  text-align: center;
+  font-size: 14px;
+  text-shadow: 1px 1px 20px white;
+}
+
+.struktur {
+  margin: auto;
+  margin-top: 10%;
+  color: white;
+  width: 50%;
+}
+
+.struktur>h1 {
+  text-align: center;
+  text-shadow: 1px 1px 20px white;
+}
+
+.struktur>p {
+  text-align: center;
+  font-size: 14px;
+  text-shadow: 1px 1px 20px white;
+}
+
+
+/* Gallery*/
+.slider{
+  background: linear-gradient(to bottom, rgba(116, 114, 114, 0.377),rgba(165, 165, 165, 0.192));
+  height: 250 px;
+  display: flex;
+  width: auto;
+  overflow: hidden;
+  align-items: center;
+}
+
+.track{
+  display: flex;
+  width: calc(250px * 16); /*numer of image = 16*/
+  animation: anime 32s linear infinite;
+
+}
+.track:hover{
+  animation-play-state: paused;
+}
+@keyframes anime {
+  0%{
+      transform: translateX(0);
+  }
+  100%{
+      transform: translateX(calc(-250px * 8)); /*images (16)/2 = 8*/
+  }
+  
+}
+
+.box{
+  width: 250px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  overflow: hidden;
+  transition: scale .5s;
+}
+
+.box:hover{
+  scale: 1.1;
+}
+
+img{
+  height: 100%;
+}
+
+/* Struktur*/
+
+
+.tree {
+	width: auto;
+	height: auto;
+	text-align: center;
+}
+
+.tree ul {
+	padding-top: 20px;
+	position: relative;
+	transition: .5s;
+}
+.tree li {
+	display: inline-table;
+	text-align: center;
+	list-style-type: none;
+	position: relative;
+	padding: 10px;
+	transition: .5s;
+}
+.tree li::before, .tree li::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 50%;
+	border-top: 1px solid #ccc;
+	width: 51%;
+	height: 10px;
+}
+.tree li::after {
+	right: auto;
+	left: 50%;
+	border-left: 1px solid #ccc;
+}
+.tree li:only-child::after, .tree li:only-child::before {
+	display: none;
+}
+.tree li:only-child {
+	padding-top: 0;
+}
+.tree li:first-child::before, .tree li:last-child::after {
+	border: 0 none;
+}
+.tree li:last-child::before {
+	border-right: 1px solid #ccc;
+	border-radius: 0 5px 0 0;
+	-webkit-border-radius: 0 5px 0 0;
+	-moz-border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after {
+	border-radius: 5px 0 0 0;
+	-webkit-border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0;
+}
+.tree ul ul::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	border-left: 1px solid #ccc;
+	width: 0;
+	height: 20px;
+}
+.tree li a {
+	border: 1px solid #ccc;
+	padding: 10px;
+	display: inline-grid;
+	border-radius: 5px;
+	text-decoration-line: none;
+	border-radius: 5px;
+	transition: .5s;
+  color: white;
+}
+
+
+.tree li a:hover, .tree li a:hover i, .tree li a:hover span, .tree li a:hover+ul li a {
+	background: #c8e4f8;
+	color: #000;
+	border: 1px solid #94a0b4;
+}
+.tree li a:hover+ul li::after, .tree li a:hover+ul li::before, .tree li a:hover+ul::before, .tree li a:hover+ul ul::before {
+	border-color: #94a0b4;
+}
+
+/* Footer*/
+
+.card {
+  width: 100%;
+  height: 110px; 
+  background: linear-gradient(to top, rgba(88, 26, 139, 0.603), rgba(42, 2, 87, 0));
+  display: flex;
+  align-items: center;
+  margin-top: 20%;
+  padding: 25px 25px;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card h {
+  color: white;
+  justify-content: start;
+  position: absolute;
+  margin-bottom: 80px;
+}
+
+.card p {
+  color: white;
+  justify-content: end;
+  align-items: end;
+  font-size: 10px;
+  position: absolute;
+  margin-top: 90px;
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  background-color: rgb(31, 31, 31);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #000000;
+  transition-duration: .3s;
+}
+
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
